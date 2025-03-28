@@ -1,218 +1,156 @@
-# 🌍 Simple Registration Page for TrinityCore/AzerothCore/AshamaneCore/CMangos
+🌍 Tah'kaka - Página de Registro Simples para TrinityCore/AzerothCore/AshamaneCore/CMangos
 
-Create a versatile website for your game server with this easy-to-use script, featuring compatibility with major server cores.
+Crie um site versátil para o seu servidor de jogo com este script fácil de usar, agora reimaginado como Tah'kaka, com compatibilidade com os principais cores de servidores.
+🎮 Cores Suportados
 
-Supported Cores:
+    AzerothCore
+    TrinityCore
+    AshamaneCore
+    CMangos
 
-- [AzerothCore](http://azerothcore.org)
-- [TrinityCore](http://TrinityCore.org)
-- [AshamaneCore](https://github.com/AshamaneProject/AshamaneCore/)
-- [CMangos](https://github.com/cmangos/)
+⭐ Gostou do projeto?
 
-### ⭐ If you liked the project, feel free to give it a shining star. ⭐
+Se você achou útil, não esqueça de deixar uma estrela no repositório!
+⭐ Estrelar no GitHub | 🍴 Fazer Fork no GitHub
+🖱️ Pré-requisitos
 
-<a href="https://github.com/masterking32/WoWSimpleRegistration">
-   <img title="Star on GitHub" src="https://img.shields.io/github/stars/masterking32/WoWSimpleRegistration.svg?style=social&label=Star">
-</a>
-<a href="https://github.com/masterking32/WoWSimpleRegistration/fork">
-   <img title="Fork on GitHub" src="https://img.shields.io/github/forks/masterking32/WoWSimpleRegistration.svg?style=social&label=Fork">
-</a>
+Certifique-se de que o PHP 8.0 ou superior está instalado no seu servidor e que as seguintes extensões estão habilitadas:
 
-## 🖱️ Prerequisites
+    GMP Extension
+    GD Extension
+    ZIP Extension
+    Soap Extension
+    Mbstring Extension
+    PDO Extension
+    PDO-MySQL Extension
 
-Ensure PHP version 8.0 or higher is installed and the following extensions are enabled:
+🖥️ Tutorial de Instalação no Windows
+1. Pré-requisitos
 
-- [GMP Extension](https://www.php.net/manual/en/book.gmp.php)
-- [GD Extension](https://www.php.net/manual/en/book.image.php)
-- [ZIP Extension](https://www.php.net/manual/en/book.zip.php)
-- [Soap Extension](https://www.php.net/manual/en/book.soap.php)
-- [Mbstring Extension](https://www.php.net/manual/en/book.mbstring.php)
-- [PDO Extension](https://www.php.net/manual/en/book.pdo.php)
-- [PDO-MySQL Extension](https://www.php.net/manual/en/ref.pdo-mysql.php)
+Antes de começar, certifique-se de que você tem os seguintes itens instalados no seu sistema:
+a) PHP
 
-## ⚙️ Installation Guide (Last version - PHP 8)
+    Baixe e instale o PHP 8.0 ou superior:
+        Acesse o site oficial do PHP: https://windows.php.net/download/.
+        Baixe a versão Thread Safe para o seu sistema (x64 ou x86).
+        Extraia o arquivo em uma pasta, como C:\php.
 
-1. Fulfill the above prerequisites on your server.
+b) Extensões do PHP
 
-2. Obtain the project files:
+Certifique-se de habilitar as seguintes extensões no arquivo php.ini:
 
-   - Download and unzip the project, or clone it using Git:
+    GMP
+    GD
+    ZIP
+    Soap
+    Mbstring
+    PDO
+    PDO-MySQL
 
-     ```bash
-     git clone https://github.com/masterking32/WoWSimpleRegistration
-     ```
+Como habilitar extensões:
 
-3. Install [Composer](https://getcomposer.org/download/).
+    Abra o arquivo php.ini (localizado na pasta onde você instalou o PHP, como C:\php\php.ini).
+    Localize as linhas das extensões e remova o ponto e vírgula (;) no início para ativá-las. Por exemplo:
+    ini
 
-4. Navigate to the project directory and then go to the `application/` directory.
+    extension=gmp
+    extension=gd
+    extension=zip
+    extension=soap
+    extension=mbstring
+    extension=pdo_mysql
 
-5. Run the following command to install the required dependencies:
+    Salve o arquivo e reinicie o servidor web (caso já esteja rodando).
 
-   ```bash
-   composer install
-   ```
+c) Servidor Web
 
-6. Navigate to the `application/config/` directory and rename the file `config.php.sample` to `config.php`.
+Você precisará de um servidor web para rodar o site. As opções mais comuns são:
 
-7. Edit the newly renamed `config.php` file, inserting your server details. Note that if using the "Image Captcha" feature, PHP's GD2 module must be enabled.
+    XAMPP (recomendado para iniciantes):
+        Baixe e instale o XAMPP: https://www.apachefriends.org/pt_br/index.html.
+        Certifique-se de que o Apache e o MySQL estão ativados no painel de controle do XAMPP.
+    WAMP:
+        Baixe e instale o WAMP: https://www.wampserver.com/.
 
-8. Once the configuration is complete, your registration page should be operational.
+d) Composer
 
-## 🔧 PHP 7 Version Download
+    Baixe e instale o Composer, que é necessário para gerenciar as dependências do projeto:
+        Acesse: https://getcomposer.org/.
+        Durante a instalação, certifique-se de que o caminho do PHP está configurado corretamente (como C:\php\php.exe).
 
-For those requiring PHP 7 support, please use the [last compatible commit for PHP 7](https://github.com/masterking32/WoWSimpleRegistration/tree/32a1e7e6bc31f2ed6ed1d83f64d1ae62aeab9d32). Follow these steps to clone the repository at the specific commit:
+2. Baixar o Projeto
 
-```sh
-git clone https://github.com/masterking32/WoWSimpleRegistration
-cd WoWSimpleRegistration
-git checkout 32a1e7e6bc31f2ed6ed1d83f64d1ae62aeab9d32
-```
+    Clone o repositório ou baixe os arquivos:
+        Para clonar o repositório, abra o terminal (Prompt de Comando ou PowerShell) e execute:
+        bash
 
-# 🪛 Debugging
+    git clone https://github.com/masterking32/WoWSimpleRegistration
 
-Encountering a blank page can be a common issue, typically indicating a hidden error that needs to be diagnosed. To facilitate troubleshooting, enable `debug_mode` in the configuration file.
+    Alternativamente, você pode baixar o projeto como um arquivo ZIP diretamente do GitHub e extraí-lo.
 
-Here’s how to enable debug mode:
+Coloque os arquivos no diretório do servidor web:
 
-- Open the `config.php` file.
-- Locate the `$config['debug_mode']` parameter.
-- Set it to `true` to enable debug mode.
+    Se estiver usando XAMPP, copie os arquivos para a pasta htdocs (geralmente localizada em C:\xampp\htdocs).
+    Por exemplo, crie uma pasta chamada tahkaka e coloque os arquivos lá:
+    text
 
-⚠️ **Important: Remember to disable debug mode** once you have resolved the issues. Debug mode should be set to `false` before deploying the website in a production environment or going live. This helps to ensure security and performance are not compromised.
+        C:\xampp\htdocs\tahkaka
 
-## ✅ Features
+3. Instalar Dependências
 
-1. **Registration Page**: Accommodating a wide range of game versions including Vanilla, TBC, WotLK, MoP, WoD, Legion, BFA, and TWW.
-2. **Online Players Status**: Check who's online on the server, with support for multiple realms.
-3. **Leaderboards**: Display top players based on Playtime, Kills, Honor Points, Arena Points, and Arena Teams across different realms.
-4. **Connection Guide**: Step-by-step ‘How to connect’ page for new players.
-5. **Contact Form**: Accessible ‘Contact us’ page for inquiries and support.
-6. **Multiple Themes**: Choose from various templates such as Light, Icecrown, Kaelthas, Advance, and Battle for Azeroth.
-7. **Password Management**: Facilities to change (as of April 10, 2019) and recover passwords (as of May 31, 2019).
-8. **Vote System**: Engage your community with a voting system (added on April 3, 2020).
-9. **Captcha Integration**: Protect your site with HCaptcha/Recaptcha v2 (since July 27, 2020).
-10. **Two-Factor Authentication (2FA)**: Add an extra layer of security with 2FA (introduced on July 28, 2020).
-11. **Multilingual Support**: Making the site accessible to a global audience with support for various languages (added on September 10, 2020), including:
-    - 🇬🇧 English
-    - 🇮🇷 Persian
-    - 🇮🇹 Italian
-    - 🇨🇳 Chinese Simplified
-    - 🇹🇼 Chinese Traditional
-    - 🇸🇪 Swedish
-    - 🇫🇷 French
-    - 🇩🇪 German
-    - 🇪🇸 Spanish
-    - 🇰🇷 Korean
-    - 🇷🇺 Russian
-    - 🇵🇹 Portuguese
-
-## 🗒️ Changelog
-
-### 2.0.3 (11/12/2024)
-
-- Support SRP6 versions 1 and 2 used by Modern WoW servers/clients. (Thanks to [funjoker](https://github.com/funjoker))
-
-### 2.0.2 (2/24/2021)
-
-- Added a language changer feature. (Thanks to [DuelistRag3](https://github.com/DuelistRag3))
-
-### 2.0.1 (2/20/2021)
-
-- Introduced SRP6 support for CMangos.
-
-### 2.0.0 (8/03/2020)
-
-- New Battle for Azeroth template added.
-
-### 1.9.9 (8/03/2020)
-
-- Multi-language support was introduced.
-
-### 1.9.8 (8/03/2020)
-
-- Implemented SRP6 support.
-
-### 1.9.7 (7/28/2020)
-
-- Added Two-Factor Authentication (2FA) support.
-- Patched a low-level security vulnerability. **(Important: Please upgrade to this version)**
-- Resolved various bugs.
-- The `account set addon` command was included as a post-registration step for SOAP registrations.
-
-### 1.9.6 (7/27/2020)
-
-- Added HCaptcha/Recaptcha/Image captcha support.
-- Enhanced page load performance.
-- Expanded descriptions within the config file for better clarity.
-- Updated composer packages.
-
-### 1.9.5 (4/17/2020)
-
-- Enabled Register/Restore Password feature via SOAP, with CMangos support.
-
-### 1.9.4 (4/03/2020)
-
-- Vote system feature added.
-
-### 1.9.3 (4/02/2020)
-
-- Introduced a new template.
-
-### 1.9.2 (3/31/2020)
-
-- Fixed reported issues.
-
-### 1.9.1 (3/12/2020)
-
-- Added PHP version check.
-
-### 1.9 (3/12/2020)
-
-- Allowed multiple accounts to share one email address for non-battle.net servers.
-- Changed the user identification method from email to username for password change and restoration features on non-battle.net servers.
-- Added the option to enable or disable the display of top players and online players.
-
-## 🖼️ Screenshots
-
-### Advance Template
-
-![Advance Template Screenshot](https://raw.githubusercontent.com/masterking32/WoWSimpleRegistration/master/screenshots/a-bfa-min.jpg)
-
-### Battle for Azeroth Template
-
-![Battle for Azeroth Template Screenshot](https://raw.githubusercontent.com/masterking32/WoWSimpleRegistration/master/screenshots/b1.jpg)
-
-### Light Template
-
-![Light Template Register Page Screenshot](https://raw.githubusercontent.com/masterking32/WoWSimpleRegistration/master/screenshots/1.jpg)
-
-### IceCrown Template
-
-![IceCrown Template Home Page Screenshot](https://raw.githubusercontent.com/masterking32/WoWSimpleRegistration/master/screenshots/i1.jpg)
-
-### Kael'thas Template
-
-![Kael'thas Template Home Page Screenshot](https://raw.githubusercontent.com/masterking32/WoWSimpleRegistration/master/screenshots/k1.jpg)
-
-Looking for more visuals? [Browse additional screenshots here.](https://github.com/masterking32/WoWSimpleRegistration/tree/master/screenshots)
-
-## ⬇️ Credits
-
-### 🧑‍💻 Programming
-
-- **Lead Developer**: [Amin.MasterkinG](https://masterking32.com)
-
-### 🫂 Translations
-
-- **English/Persian**: [Amin.MasterkinG](https://github.com/masterking32)
-- **Italian**: [Helias](https://github.com/helias)
-- **Chinese Simplified/Traditional**: [Coolzoom](https://github.com/coolzoom), [oiuv](https://github.com/oiuv)
-- **Swedish**: [Kitzunu](https://github.com/Kitzunu)
-- **French**: [Kalorte](https://github.com/Kalorte)
-- **German**: [DuelistRag3](https://github.com/DuelistRag3)
-- **Spanish**: [xjose93](https://github.com/xjose93)
-- **Korean**: [KOREAFTP](https://github.com/KOREAFTP)
-- **Russian**: [Haeniken](https://github.com/Haeniken)
-- **Portuguese**: [xnexuiz](https://github.com/xnexuiz)
-
-Heartfelt thanks to all the contributors for their invaluable support and contributions to this project.
+    Abra o terminal (Prompt de Comando ou PowerShell).
+    Navegue até o diretório do projeto:
+    bash
+
+cd C:\xampp\htdocs\tahkaka\application
+
+Execute o comando para instalar as dependências:
+bash
+
+    composer install
+
+4. Configurar o Projeto
+
+    Renomeie o arquivo de configuração:
+        Navegue até o diretório application/config/.
+        Renomeie o arquivo config.php.sample para config.php.
+
+    Edite o arquivo config.php:
+        Abra o arquivo config.php com um editor de texto (como o Notepad++ ou VS Code).
+        Configure os detalhes do seu servidor, como:
+            Host do banco de dados (geralmente localhost).
+            Usuário e senha do banco de dados.
+            Nome do banco de dados usado pelo seu servidor de WoW.
+        Se você for usar o recurso de "Captcha de Imagem", certifique-se de que o módulo GD2 está habilitado no PHP.
+
+✅ Funcionalidades
+
+    Página de Registro: Compatível com várias versões do jogo, incluindo Vanilla, TBC, WotLK, MoP, WoD, Legion, BFA e TWW.
+    Status de Jogadores Online: Veja quem está online no servidor, com suporte para múltiplos reinos.
+    Rankings: Exiba os melhores jogadores com base em Tempo de Jogo, Kills, Pontos de Honra, Pontos de Arena e Times de Arena em diferentes reinos.
+    Guia de Conexão: Página "Como se conectar" para ajudar novos jogadores.
+    Formulário de Contato: Página "Fale Conosco" para suporte e dúvidas.
+    Temas Múltiplos: Escolha entre vários templates, como Light, Icecrown, Kael'thas, Advance e Battle for Azeroth.
+    Gerenciamento de Senhas: Recursos para alterar (desde 10 de abril de 2019) e recuperar senhas (desde 31 de maio de 2019).
+    Sistema de Votação: Engaje sua comunidade com um sistema de votação (adicionado em 3 de abril de 2020).
+    Integração de Captcha: Proteja seu site com HCaptcha/Recaptcha v2 (desde 27 de julho de 2020).
+    Autenticação de Dois Fatores (2FA): Adicione uma camada extra de segurança com 2FA (introduzido em 28 de julho de 2020).
+    Suporte Multilíngue: Torne o site acessível para uma audiência global com suporte para vários idiomas (adicionado em 10 de setembro de 2020), incluindo:
+        🇬🇧 Inglês
+        🇮🇷 Persa
+        🇮🇹 Italiano
+        🇨🇳 Chinês Simplificado
+        🇹🇼 Chinês Tradicional
+        🇸🇪 Sueco
+        🇫🇷 Francês
+        🇩🇪 Alemão
+        🇪🇸 Espanhol
+        🇰🇷 Coreano
+        🇷🇺 Russo
+        🇵🇹 Português
+
+🚀 Sobre o Projeto Tah'kaka
+
+O Tah'kaka é uma evolução de projetos anteriores, trazendo uma solução moderna, acessível e altamente personalizável para servidores privados de World of Warcraft. Com suporte para os principais cores e uma ampla gama de funcionalidades, ele é ideal para quem deseja criar uma experiência profissional para sua comunidade.
+
+Se você tiver dúvidas ou sugestões, sinta-se à vontade para contribuir ou abrir uma issue no repositório do GitHub.
