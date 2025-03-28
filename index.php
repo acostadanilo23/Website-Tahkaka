@@ -5,6 +5,8 @@
  * @link    https://masterking32.com
  **/
 
+ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
 $osType = PHP_OS;
 if (version_compare(PHP_VERSION, '8.0', '<')) {
     echo "<p>Your server needs to run PHP version 8.0.0 or higher.</p>";

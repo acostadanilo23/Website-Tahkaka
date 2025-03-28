@@ -10,7 +10,7 @@
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2><?php elang('about_server'); ?></h2>
-                <p><?php elang('game_version'); ?>: <b><span style="color: #007a0c"><?php echo get_config('game_version'); ?></span></b>
+                <p><?php elang('game_version'); ?>: <b><span style="color: #007a0c">World of Warcraft Classic (1.12.1)</span></b>
                 </p>
             </div>
             <div class="row">
@@ -29,14 +29,11 @@
                             <li><i class="bx bx-check-double"></i><?php elang('xp_rate'); ?>: <b>x4</b></li>
                             <li><i class="bx bx-check-double"></i><?php elang('drop_rate'); ?>: <b>x4</b></li>
                             <li><i class="bx bx-check-double"></i><?php elang('start_level'); ?>: <b>1</b></li>
-                            <li><i class="bx bx-check-double"></i><?php elang('max_level'); ?>: <b>80</b></li>
+                            <li><i class="bx bx-check-double"></i><?php elang('max_level'); ?>: <b>60</b></li>
                             <li><i class="bx bx-check-double"></i><?php elang('fixed_spells'); ?>: <b>95%</b></li>
                             <li><i class="bx bx-check-double"></i><?php elang('fixed_dungeons'); ?>: <b>99%</b></li>
                             <li><i class="bx bx-check-double"></i><?php elang('fixed_instances'); ?>: <b>99%</b></li>
                         </ul>
-                        <p>
-                            <?php elang('edit_on'); ?> <b>"/template/advance/tpl/server-info.php"</b>.
-                        </p>
                     </div>
                 </div>
             </div>

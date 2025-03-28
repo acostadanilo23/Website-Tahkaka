@@ -44,6 +44,13 @@ class status
         return false;
     }
 
+    public static function get_top_arenateams($realm_id)
+    {
+    // Retornar um array vazio, já que não há suporte para arena teams no Vanilla
+    return [];
+    }
+
+    /*
     public static function get_top_arenateams($realmID)
     {
         $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
@@ -59,78 +66,76 @@ class status
             return $datas;
         }
         return false;
-    }
+    }*/
 
-    public static function get_top_killers($realmID)
+    public static function get_top_killers($realm_id)
     {
-        $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
-        $queryBuilder->select("name, race, class, gender, level, totalKills")
-            ->from("characters")
-            ->orderBy("totalKills", "DESC")
-            ->setMaxResults(10);
-        $statement = $queryBuilder->executeQuery();
-        $datas = $statement->fetchAllAssociative();
-
-        if (!empty($datas[0]["totalKills"])) {
-            return $datas;
-        }
-        return false;
+    $database = database::$chars[$realm_id];
+    $query = $database->createQueryBuilder();
+    
+    // Usar honor_last_week_hk + honor_stored_hk como totalKills
+    $query->select('name, race, class, gender, level, (honor_last_week_hk + honor_stored_hk) as totalKills')
+        ->from('characters')
+        ->orderBy('totalKills', 'DESC')
+        ->setMaxResults(10);
+    
+    $result = $query->executeQuery();
+    
+    return $result->fetchAllAssociative();
     }
 
-    public static function get_top_arenapoints($realmID)
+    public static function get_top_arenapoints($realm_id)
     {
-        $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
-        $queryBuilder->select("name, race, class, gender, level, arenaPoints")
-            ->from("characters")
-            ->orderBy("arenaPoints", "DESC")
-            ->setMaxResults(10);
-        $statement = $queryBuilder->executeQuery();
-        $datas = $statement->fetchAllAssociative();
-
-        if (!empty($datas[0]["arenaPoints"])) {
-            return $datas;
-        }
-        return false;
+    // Retornar um array vazio, já que não há suporte para arena points no Vanilla
+    return [];
     }
 
-    public static function get_top_honorpoints($realmID)
+
+ #   public static function get_top_arenapoints($realmID)
+ #   {
+ #       $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
+ #       $queryBuilder->select("name, race, class, gender, level, arenaPoints")
+ #           ->from("characters")
+ #           ->orderBy("arenaPoints", "DESC")
+ #           ->setMaxResults(10);
+ #       $statement = $queryBuilder->executeQuery();
+ #       $datas = $statement->fetchAllAssociative();
+
+ #       if (!empty($datas[0]["arenaPoints"])) {
+ #           return $datas;
+ #       }
+ #       return false;
+ #   }
+
+    public static function get_top_honorpoints($realm_id)
     {
-        $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
-
-        if (get_config('expansion') >= 6) {
-            $queryBuilder->select("name, race, class, gender, level, honorLevel, honor")
-                ->from("characters")
-                ->orderBy("honorLevel", "DESC")
-                ->addOrderBy("honor", "DESC")
-                ->setMaxResults(10);
-        } else {
-            $queryBuilder->select("name, race, class, gender, level, totalHonorPoints")
-                ->from("characters")
-                ->orderBy("totalHonorPoints", "DESC")
-                ->setMaxResults(10);
-        }
-
-        $statement = $queryBuilder->executeQuery();
-        $datas = $statement->fetchAllAssociative();
-
-        if (!empty($datas[0]["level"])) {
-            return $datas;
-        }
-        return false;
+    $database = database::$chars[$realm_id];
+    $query = $database->createQueryBuilder();
+    
+    // Usar honor_rank_points como totalHonorPoints
+    $query->select('name, race, class, gender, level, honor_rank_points as totalHonorPoints')
+        ->from('characters')
+        ->orderBy('honor_rank_points', 'DESC')
+        ->setMaxResults(10);
+    
+    $result = $query->executeQuery();
+    
+    return $result->fetchAllAssociative();
     }
+
 
     public static function get_top_playtime($realmID)
     {
         $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
-        $queryBuilder->select("name, race, class, gender, level, totaltime")
+        $queryBuilder->select("name, race, class, gender, level, played_time_total")
             ->from("characters")
-            ->orderBy("totaltime", "DESC")
+            ->orderBy("played_time_total", "DESC")
             ->setMaxResults(10);
 
         $statement = $queryBuilder->executeQuery();
         $datas = $statement->fetchAllAssociative();
 
-        if (!empty($datas[0]["totaltime"])) {
+        if (!empty($datas[0]["played_time_total"])) {
             return $datas;
         }
         return false;
@@ -139,7 +144,7 @@ class status
     public static function get_top_gold($realmID)
     {
         $queryBuilder = database::$chars[$realmID]->createQueryBuilder();
-        $queryBuilder->select("name, race, level, totaltime, money")
+        $queryBuilder->select("name, race, level, played_time_total, money")
             ->from("characters")
             ->orderBy("money", "DESC")
             ->setMaxResults(10);

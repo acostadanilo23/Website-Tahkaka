@@ -19,38 +19,34 @@
                 <div class="accordion-list">
                     <ul>
                         <li data-aos="fade-up" data-aos-delay="100">
-                            <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> <?php elang('rule'); ?>
-                                1<i
+                            <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Respeito aos jogadores<i
                                         class="bx bx-chevron-down icon-show"></i><i
                                         class="bx bx-chevron-up icon-close"></i></a>
                             <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
                                 <p>
-                                    <?php elang('rule'); ?> 1
-                                </p>
-                                <p>
-                                    <?php elang('edit_on'); ?> <b>"/template/advance/tpl/rules.php"</b>.
+                                    Todos os jogadores devem tratar uns aos outros com respeito. Não toleramos assédio, discurso de ódio, racismo, sexismo ou qualquer forma de discriminação.
                                 </p>
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="200">
                             <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span>
-                                <?php elang('rule'); ?> 2<i
+                                Proibição de cheats e hacks<i
                                         class="bx bx-chevron-down icon-show"></i><i
                                         class="bx bx-chevron-up icon-close"></i></a>
                             <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
                                 <p>
-                                    <?php elang('rule'); ?> 2
+                                    O uso de qualquer programa de terceiros que dê vantagem injusta, como bots, hacks, ou exploits, resultará em banimento permanente da conta.
                                 </p>
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="300">
                             <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span>
-                                <?php elang('rule'); ?> 3<i
+                                Comércio de ouro e contas<i
                                         class="bx bx-chevron-down icon-show"></i><i
                                         class="bx bx-chevron-up icon-close"></i></a>
                             <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
                                 <p>
-                                    <?php elang('rule'); ?> 3
+                                    A venda ou compra de ouro, itens ou contas por dinheiro real é estritamente proibida e resultará em banimento.
                                 </p>
                             </div>
                         </li>

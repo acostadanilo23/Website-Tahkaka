@@ -128,6 +128,11 @@ function GetClassID($class)
 
 function get_human_time_from_sec($seconds)
 {
+    // Verificar se $seconds é nulo ou não numérico
+    if ($seconds === null || !is_numeric($seconds)) {
+        return "0:0:0"; // Retorna um valor padrão se for nulo
+    }
+    
     $interval = new DateInterval("PT{$seconds}S");
     $now = new DateTimeImmutable('now', new DateTimeZone('utc'));
     return $now->diff($now->add($interval))->format('%a:%h:%i');

@@ -9,33 +9,32 @@
 <section id="contact" class="contact section-bg">
         <div class="container">
             <div class="section-title">
-                <h2><?php elang('contact'); ?></h2>
-                <p><?php elang('edit_on'); ?> <b>"/template/advance/tpl/contact.php"</b>.</p>
-            </div>
+                <h2><?php# elang('contact'); ?></h2>
+            <!--</div>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
                         <div class="address">
                             <i class="icofont-google-map"></i>
                             <h4><?php elang('location'); ?>:</h4>
-                            <p>Tehran, Iran</p>
+                            <p>Belém, Brasil</p>
                         </div>
 
                         <div class="email">
                             <i class="icofont-envelope"></i>
-                            <h4><?php elang('email'); ?>:</h4>
-                            <p>info@example.com</p>
+                            <h4><#?php elang('email'); ?>:</h4>
+                            <p>wowbelem.oficial@gmail.com</p>
                         </div>
                         <div class="phone">
                             <i class="icofont-phone"></i>
-                            <h4><?php elang('call'); ?>:</h4>
-                            <p>+98 915 620 9344</p>
+                            <h4><#?php elang('call'); ?>:</h4>
+                            <p>+55 91 99999-9999</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
-                    <iframe src="https://discordapp.com/widget?id=376650959532589057&theme=dark"
-                            style="border:0;width: 100%; height: 100%;"></iframe>
+                    <iframe src="https://discordapp.com/widget?id=1355030737748754452&theme=dark"
+                            style="border:2;width: 150%; height: 300%;"></iframe>
                 </div>
             </div>
         </div>

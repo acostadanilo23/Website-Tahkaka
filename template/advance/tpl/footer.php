@@ -8,23 +8,23 @@
 ?>
 </main>
 <footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="social-links" data-aos="fade-up" data-aos-delay="100">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            </div>
-        </div>
-    </div>
     <div class="container footer-bottom clearfix">
         <div class="credits">
-            Developed by <a href="http://masterking32.com">MasterkinG32.CoM</a>
-            - <?php echo "Load " . (new SebastianBergmann\Timer\ResourceUsageFormatter)->resourceUsageSinceStartOfRequest(); ?>
-            <BR>
-            Tempelate Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> and Modified by <a
-                    href="http://masterking32.com">Amin.MasterkinG</a>
+            <p>
+                Servidor Privado Tah'kaka WoW Classic &copy; 2025 - Este é um servidor privado
+                não afiliado à Blizzard Entertainment
+            </p>
+            <p>
+                Para suporte, entre em contato:
+                <a href="mailto:wowbelem.oficial@gmail.com">wowbelem.oficial@gmail.com</a>
+            </p>
+            <p>
+                <a href="https://discord.gg/nosso-servidor" target="_blank">Discord da Comunidade</a>
+            </p>
+            <p>
+                Developed by DAN
+                <!-- - <?php #echo "Load " . (new SebastianBergmann\Timer\ResourceUsageFormatter)->resourceUsageSinceStartOfRequest(); ?> -->
+            </p>
         </div>
     </div>
 </footer>
